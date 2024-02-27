@@ -117,25 +117,25 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-ch03/CMakeFiles/test03.dir/rule:
-	cd C:/Users/wujil/workspace/ds_learn/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ch03/CMakeFiles/test03.dir/rule
-.PHONY : ch03/CMakeFiles/test03.dir/rule
+ch03/CMakeFiles/ch03.dir/rule:
+	cd C:/Users/wujil/workspace/ds_learn/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ch03/CMakeFiles/ch03.dir/rule
+.PHONY : ch03/CMakeFiles/ch03.dir/rule
 
 # Convenience name for target.
-test03: ch03/CMakeFiles/test03.dir/rule
-.PHONY : test03
+ch03: ch03/CMakeFiles/ch03.dir/rule
+.PHONY : ch03
 
 # fast build rule for target.
-test03/fast:
-	cd C:/Users/wujil/workspace/ds_learn/build && $(MAKE) $(MAKESILENT) -f ch03/CMakeFiles/test03.dir/build.make ch03/CMakeFiles/test03.dir/build
-.PHONY : test03/fast
+ch03/fast:
+	cd C:/Users/wujil/workspace/ds_learn/build && $(MAKE) $(MAKESILENT) -f ch03/CMakeFiles/ch03.dir/build.make ch03/CMakeFiles/ch03.dir/build
+.PHONY : ch03/fast
 
 main.obj: main.c.obj
 .PHONY : main.obj
 
 # target to build an object file
 main.c.obj:
-	cd C:/Users/wujil/workspace/ds_learn/build && $(MAKE) $(MAKESILENT) -f ch03/CMakeFiles/test03.dir/build.make ch03/CMakeFiles/test03.dir/main.c.obj
+	cd C:/Users/wujil/workspace/ds_learn/build && $(MAKE) $(MAKESILENT) -f ch03/CMakeFiles/ch03.dir/build.make ch03/CMakeFiles/ch03.dir/main.c.obj
 .PHONY : main.c.obj
 
 main.i: main.c.i
@@ -143,7 +143,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	cd C:/Users/wujil/workspace/ds_learn/build && $(MAKE) $(MAKESILENT) -f ch03/CMakeFiles/test03.dir/build.make ch03/CMakeFiles/test03.dir/main.c.i
+	cd C:/Users/wujil/workspace/ds_learn/build && $(MAKE) $(MAKESILENT) -f ch03/CMakeFiles/ch03.dir/build.make ch03/CMakeFiles/ch03.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -151,7 +151,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	cd C:/Users/wujil/workspace/ds_learn/build && $(MAKE) $(MAKESILENT) -f ch03/CMakeFiles/test03.dir/build.make ch03/CMakeFiles/test03.dir/main.c.s
+	cd C:/Users/wujil/workspace/ds_learn/build && $(MAKE) $(MAKESILENT) -f ch03/CMakeFiles/ch03.dir/build.make ch03/CMakeFiles/ch03.dir/main.c.s
 .PHONY : main.c.s
 
 sqlist.obj: sqlist.c.obj
@@ -159,7 +159,7 @@ sqlist.obj: sqlist.c.obj
 
 # target to build an object file
 sqlist.c.obj:
-	cd C:/Users/wujil/workspace/ds_learn/build && $(MAKE) $(MAKESILENT) -f ch03/CMakeFiles/test03.dir/build.make ch03/CMakeFiles/test03.dir/sqlist.c.obj
+	cd C:/Users/wujil/workspace/ds_learn/build && $(MAKE) $(MAKESILENT) -f ch03/CMakeFiles/ch03.dir/build.make ch03/CMakeFiles/ch03.dir/sqlist.c.obj
 .PHONY : sqlist.c.obj
 
 sqlist.i: sqlist.c.i
@@ -167,7 +167,7 @@ sqlist.i: sqlist.c.i
 
 # target to preprocess a source file
 sqlist.c.i:
-	cd C:/Users/wujil/workspace/ds_learn/build && $(MAKE) $(MAKESILENT) -f ch03/CMakeFiles/test03.dir/build.make ch03/CMakeFiles/test03.dir/sqlist.c.i
+	cd C:/Users/wujil/workspace/ds_learn/build && $(MAKE) $(MAKESILENT) -f ch03/CMakeFiles/ch03.dir/build.make ch03/CMakeFiles/ch03.dir/sqlist.c.i
 .PHONY : sqlist.c.i
 
 sqlist.s: sqlist.c.s
@@ -175,7 +175,7 @@ sqlist.s: sqlist.c.s
 
 # target to generate assembly for a file
 sqlist.c.s:
-	cd C:/Users/wujil/workspace/ds_learn/build && $(MAKE) $(MAKESILENT) -f ch03/CMakeFiles/test03.dir/build.make ch03/CMakeFiles/test03.dir/sqlist.c.s
+	cd C:/Users/wujil/workspace/ds_learn/build && $(MAKE) $(MAKESILENT) -f ch03/CMakeFiles/ch03.dir/build.make ch03/CMakeFiles/ch03.dir/sqlist.c.s
 .PHONY : sqlist.c.s
 
 # Help Target
@@ -186,7 +186,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... test03"
+	@echo "... ch03"
 	@echo "... main.obj"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -35,6 +35,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.27.0-rc2/CMakeRCCompiler.cmake"
   "CMakeFiles/3.27.0-rc2/CMakeSystem.cmake"
   "C:/Users/wujil/workspace/ds_learn/ch03/CMakeLists.txt"
+  "C:/Users/wujil/workspace/ds_learn/ch04/CMakeLists.txt"
   )
 
 # The corresponding makefile is:
@@ -47,9 +48,11 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "ch03/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "ch04/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "ch03/CMakeFiles/test03.dir/DependInfo.cmake"
+  "ch03/CMakeFiles/ch03.dir/DependInfo.cmake"
+  "ch04/CMakeFiles/ch04.dir/DependInfo.cmake"
   )

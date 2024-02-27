@@ -117,17 +117,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test03
+# Target rules for targets named ch03
 
 # Build rule for target.
-test03: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test03
-.PHONY : test03
+ch03: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ch03
+.PHONY : ch03
 
 # fast build rule for target.
-test03/fast:
-	$(MAKE) $(MAKESILENT) -f ch03/CMakeFiles/test03.dir/build.make ch03/CMakeFiles/test03.dir/build
-.PHONY : test03/fast
+ch03/fast:
+	$(MAKE) $(MAKESILENT) -f ch03/CMakeFiles/ch03.dir/build.make ch03/CMakeFiles/ch03.dir/build
+.PHONY : ch03/fast
+
+#=============================================================================
+# Target rules for targets named ch04
+
+# Build rule for target.
+ch04: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ch04
+.PHONY : ch04
+
+# fast build rule for target.
+ch04/fast:
+	$(MAKE) $(MAKESILENT) -f ch04/CMakeFiles/ch04.dir/build.make ch04/CMakeFiles/ch04.dir/build
+.PHONY : ch04/fast
 
 # Help Target
 help:
@@ -137,7 +150,8 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... test03"
+	@echo "... ch03"
+	@echo "... ch04"
 .PHONY : help
 
 

@@ -1,8 +1,6 @@
 #include "sqlist.h"
 
 
-
-
 /* Status 是函数的类型，其值是函数结果状态代码，如OK等
 初始条件：顺序线性表L已存在，1<=i<=ListLength(L)
 操作结果：用e返回L中第i个元素的值

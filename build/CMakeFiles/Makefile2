@@ -64,21 +64,24 @@ CMAKE_BINARY_DIR = C:/Users/wujil/workspace/ds_learn/build
 
 # The main recursive "all" target.
 all: ch03/all
+all: ch04/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: ch03/preinstall
+preinstall: ch04/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: ch03/clean
+clean: ch04/clean
 .PHONY : clean
 
 #=============================================================================
 # Directory level rules for directory ch03
 
 # Recursive "all" directory target.
-ch03/all: ch03/CMakeFiles/test03.dir/all
+ch03/all: ch03/CMakeFiles/ch03.dir/all
 .PHONY : ch03/all
 
 # Recursive "preinstall" directory target.
@@ -86,34 +89,75 @@ ch03/preinstall:
 .PHONY : ch03/preinstall
 
 # Recursive "clean" directory target.
-ch03/clean: ch03/CMakeFiles/test03.dir/clean
+ch03/clean: ch03/CMakeFiles/ch03.dir/clean
 .PHONY : ch03/clean
 
 #=============================================================================
-# Target rules for target ch03/CMakeFiles/test03.dir
+# Directory level rules for directory ch04
+
+# Recursive "all" directory target.
+ch04/all: ch04/CMakeFiles/ch04.dir/all
+.PHONY : ch04/all
+
+# Recursive "preinstall" directory target.
+ch04/preinstall:
+.PHONY : ch04/preinstall
+
+# Recursive "clean" directory target.
+ch04/clean: ch04/CMakeFiles/ch04.dir/clean
+.PHONY : ch04/clean
+
+#=============================================================================
+# Target rules for target ch03/CMakeFiles/ch03.dir
 
 # All Build rule for target.
-ch03/CMakeFiles/test03.dir/all:
-	$(MAKE) $(MAKESILENT) -f ch03/CMakeFiles/test03.dir/build.make ch03/CMakeFiles/test03.dir/depend
-	$(MAKE) $(MAKESILENT) -f ch03/CMakeFiles/test03.dir/build.make ch03/CMakeFiles/test03.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:/Users/wujil/workspace/ds_learn/build/CMakeFiles --progress-num=1,2,3 "Built target test03"
-.PHONY : ch03/CMakeFiles/test03.dir/all
+ch03/CMakeFiles/ch03.dir/all:
+	$(MAKE) $(MAKESILENT) -f ch03/CMakeFiles/ch03.dir/build.make ch03/CMakeFiles/ch03.dir/depend
+	$(MAKE) $(MAKESILENT) -f ch03/CMakeFiles/ch03.dir/build.make ch03/CMakeFiles/ch03.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:/Users/wujil/workspace/ds_learn/build/CMakeFiles --progress-num=1,2,3 "Built target ch03"
+.PHONY : ch03/CMakeFiles/ch03.dir/all
 
 # Build rule for subdir invocation for target.
-ch03/CMakeFiles/test03.dir/rule: cmake_check_build_system
+ch03/CMakeFiles/ch03.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/wujil/workspace/ds_learn/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ch03/CMakeFiles/test03.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ch03/CMakeFiles/ch03.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/wujil/workspace/ds_learn/build/CMakeFiles 0
-.PHONY : ch03/CMakeFiles/test03.dir/rule
+.PHONY : ch03/CMakeFiles/ch03.dir/rule
 
 # Convenience name for target.
-test03: ch03/CMakeFiles/test03.dir/rule
-.PHONY : test03
+ch03: ch03/CMakeFiles/ch03.dir/rule
+.PHONY : ch03
 
 # clean rule for target.
-ch03/CMakeFiles/test03.dir/clean:
-	$(MAKE) $(MAKESILENT) -f ch03/CMakeFiles/test03.dir/build.make ch03/CMakeFiles/test03.dir/clean
-.PHONY : ch03/CMakeFiles/test03.dir/clean
+ch03/CMakeFiles/ch03.dir/clean:
+	$(MAKE) $(MAKESILENT) -f ch03/CMakeFiles/ch03.dir/build.make ch03/CMakeFiles/ch03.dir/clean
+.PHONY : ch03/CMakeFiles/ch03.dir/clean
+
+#=============================================================================
+# Target rules for target ch04/CMakeFiles/ch04.dir
+
+# All Build rule for target.
+ch04/CMakeFiles/ch04.dir/all:
+	$(MAKE) $(MAKESILENT) -f ch04/CMakeFiles/ch04.dir/build.make ch04/CMakeFiles/ch04.dir/depend
+	$(MAKE) $(MAKESILENT) -f ch04/CMakeFiles/ch04.dir/build.make ch04/CMakeFiles/ch04.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:/Users/wujil/workspace/ds_learn/build/CMakeFiles --progress-num=4,5 "Built target ch04"
+.PHONY : ch04/CMakeFiles/ch04.dir/all
+
+# Build rule for subdir invocation for target.
+ch04/CMakeFiles/ch04.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/wujil/workspace/ds_learn/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ch04/CMakeFiles/ch04.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/wujil/workspace/ds_learn/build/CMakeFiles 0
+.PHONY : ch04/CMakeFiles/ch04.dir/rule
+
+# Convenience name for target.
+ch04: ch04/CMakeFiles/ch04.dir/rule
+.PHONY : ch04
+
+# clean rule for target.
+ch04/CMakeFiles/ch04.dir/clean:
+	$(MAKE) $(MAKESILENT) -f ch04/CMakeFiles/ch04.dir/build.make ch04/CMakeFiles/ch04.dir/clean
+.PHONY : ch04/CMakeFiles/ch04.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

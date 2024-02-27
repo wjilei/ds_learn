@@ -1,5 +1,8 @@
 C:/Users/wujil/workspace/ds_learn/build/CMakeFiles/edit_cache.dir
 C:/Users/wujil/workspace/ds_learn/build/CMakeFiles/rebuild_cache.dir
-C:/Users/wujil/workspace/ds_learn/build/ch03/CMakeFiles/test03.dir
+C:/Users/wujil/workspace/ds_learn/build/ch03/CMakeFiles/ch03.dir
 C:/Users/wujil/workspace/ds_learn/build/ch03/CMakeFiles/edit_cache.dir
 C:/Users/wujil/workspace/ds_learn/build/ch03/CMakeFiles/rebuild_cache.dir
+C:/Users/wujil/workspace/ds_learn/build/ch04/CMakeFiles/ch04.dir
+C:/Users/wujil/workspace/ds_learn/build/ch04/CMakeFiles/edit_cache.dir
+C:/Users/wujil/workspace/ds_learn/build/ch04/CMakeFiles/rebuild_cache.dir
