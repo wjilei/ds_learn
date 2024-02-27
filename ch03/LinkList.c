@@ -5,6 +5,26 @@
 #include <stdlib.h>
 #include <string.h>
 
+
+LinkList CreateList() {
+  LinkList L = (LinkList)malloc(sizeof(Node));
+  L->next = NULL;
+  return L;
+}
+
+void ClearList(LinkList *L) {
+  LinkList p,next;
+  p = (*L)->next;
+  while(p) {
+    next = p->next;
+    free(p);
+    p = next;
+  }
+
+  free(*L);
+  *L = NULL;
+}
+
 // 初始条件: 线性表L已存在,1<=i<=ListLength(L)
 // 操作结果: 用e返回L中第i个数据元素的值
 Status GetElem(LinkList L, int i, ElemType *e) {
@@ -41,8 +61,6 @@ Status ListInsert(LinkList *L, int i, ElemType e) {
   }
 
   s = (LinkList)malloc(sizeof(Node));
-  memset(s, 0, sizeof(Node));
-  printf("hahaha\n");
   s->data = e;
   s->next = p->next;
   p->next = s;

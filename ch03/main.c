@@ -18,19 +18,22 @@
 //   printf("\n");
 // }
 
-static void PrintLinkList(LinkList L) {
+static void PrintLinkList(LinkList L)
+{
   int len = ListLength(L);
   int i;
   ElemType e;
   printf("%d\n", len);
-  for (i = 1; i <= len; i++) {
+  for (i = 1; i <= len; i++)
+  {
     GetElem(L, i, &e);
     printf("%d ", e);
   }
   printf("\n");
 }
 
-int main() {
+int main()
+{
   // SqList L = {0};
   // ElemType e = 10, e1, e2;
   // int i;
@@ -46,21 +49,19 @@ int main() {
   LinkList L;
   ElemType e;
   Status ret;
-  L = (LinkList)malloc(sizeof(Node));
-  if (!L) {
-    printf("malloc fail\n");
-    return 1;
-  }
+  L = CreateList();
 
-  memset(L, 0, sizeof(Node));
   ListInsert(&L, 1, 2);
   ListInsert(&L, 2, 3);
   ListInsert(&L, 3, 5);
   ret = ListInsert(&L, 5, 10);
-  if(ret != ERROR) {
+  if (ret != ERROR)
+  {
     printf("error\n");
     return 2;
-  } else {
+  }
+  else
+  {
     printf("insert 5:10 error\n");
   }
 
@@ -70,14 +71,19 @@ int main() {
   printf("delete: %d\n", e);
 
   ret = ListDelete(&L, 4, &e);
-  if(ret != ERROR) {
+  if (ret != ERROR)
+  {
     printf("error\n");
     return 2;
-  } else {
+  }
+  else
+  {
     printf("delete 4 error\n");
   }
 
   PrintLinkList(L);
+
+  ClearList(&L);
 
   return 0;
 }

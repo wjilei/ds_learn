@@ -11,6 +11,10 @@ typedef struct Node {
 
 typedef struct Node *LinkList;
 
+
+LinkList CreateList();
+void ClearList(LinkList *L);
+
 // 初始条件: 线性表L已存在,1<=i<=ListLength(L)
 // 操作结果: 用e返回L中第i个数据元素的值
 Status GetElem(LinkList L, int i, ElemType *e);
