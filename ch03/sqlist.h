@@ -25,6 +25,21 @@ struct SqList{
 */
 Status GetElem(SqList L, int i, ElemType *e);
 
+/*
+初始条件：顺序线性表L已存在，1<=i<=ListLength(L)
+操作结果：在L中第i个位置之前插入新的元素e,L的长度加1
+*/
 Status ListInsert(SqList *L, int i, ElemType e);
+
+
+// 初始条件：顺序线性表L已存在, 1<=i<=ListLength(L)
+// 操作结果：删除L的第i个数据元素，并用e返回其值，L的长度减1
+Status ListDelete(SqList *L, int i, ElemType *e);
+
+
+
+// 初始条件：顺序线性表L已存在
+// 操作结果：返回线性表的长度
+int ListLength(SqList L);
 
 #endif
