@@ -130,6 +130,30 @@ ch03/fast:
 	cd C:/Users/wujil/workspace/ds_learn/build && $(MAKE) $(MAKESILENT) -f ch03/CMakeFiles/ch03.dir/build.make ch03/CMakeFiles/ch03.dir/build
 .PHONY : ch03/fast
 
+LinkList.obj: LinkList.c.obj
+.PHONY : LinkList.obj
+
+# target to build an object file
+LinkList.c.obj:
+	cd C:/Users/wujil/workspace/ds_learn/build && $(MAKE) $(MAKESILENT) -f ch03/CMakeFiles/ch03.dir/build.make ch03/CMakeFiles/ch03.dir/LinkList.c.obj
+.PHONY : LinkList.c.obj
+
+LinkList.i: LinkList.c.i
+.PHONY : LinkList.i
+
+# target to preprocess a source file
+LinkList.c.i:
+	cd C:/Users/wujil/workspace/ds_learn/build && $(MAKE) $(MAKESILENT) -f ch03/CMakeFiles/ch03.dir/build.make ch03/CMakeFiles/ch03.dir/LinkList.c.i
+.PHONY : LinkList.c.i
+
+LinkList.s: LinkList.c.s
+.PHONY : LinkList.s
+
+# target to generate assembly for a file
+LinkList.c.s:
+	cd C:/Users/wujil/workspace/ds_learn/build && $(MAKE) $(MAKESILENT) -f ch03/CMakeFiles/ch03.dir/build.make ch03/CMakeFiles/ch03.dir/LinkList.c.s
+.PHONY : LinkList.c.s
+
 main.obj: main.c.obj
 .PHONY : main.obj
 
@@ -154,30 +178,6 @@ main.c.s:
 	cd C:/Users/wujil/workspace/ds_learn/build && $(MAKE) $(MAKESILENT) -f ch03/CMakeFiles/ch03.dir/build.make ch03/CMakeFiles/ch03.dir/main.c.s
 .PHONY : main.c.s
 
-sqlist.obj: sqlist.c.obj
-.PHONY : sqlist.obj
-
-# target to build an object file
-sqlist.c.obj:
-	cd C:/Users/wujil/workspace/ds_learn/build && $(MAKE) $(MAKESILENT) -f ch03/CMakeFiles/ch03.dir/build.make ch03/CMakeFiles/ch03.dir/sqlist.c.obj
-.PHONY : sqlist.c.obj
-
-sqlist.i: sqlist.c.i
-.PHONY : sqlist.i
-
-# target to preprocess a source file
-sqlist.c.i:
-	cd C:/Users/wujil/workspace/ds_learn/build && $(MAKE) $(MAKESILENT) -f ch03/CMakeFiles/ch03.dir/build.make ch03/CMakeFiles/ch03.dir/sqlist.c.i
-.PHONY : sqlist.c.i
-
-sqlist.s: sqlist.c.s
-.PHONY : sqlist.s
-
-# target to generate assembly for a file
-sqlist.c.s:
-	cd C:/Users/wujil/workspace/ds_learn/build && $(MAKE) $(MAKESILENT) -f ch03/CMakeFiles/ch03.dir/build.make ch03/CMakeFiles/ch03.dir/sqlist.c.s
-.PHONY : sqlist.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -187,12 +187,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ch03"
+	@echo "... LinkList.obj"
+	@echo "... LinkList.i"
+	@echo "... LinkList.s"
 	@echo "... main.obj"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... sqlist.obj"
-	@echo "... sqlist.i"
-	@echo "... sqlist.s"
 .PHONY : help
 
 

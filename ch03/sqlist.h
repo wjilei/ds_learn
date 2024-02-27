@@ -2,16 +2,7 @@
 #ifndef _SQ_LIST_H_
 #define _SQ_LIST_H_
 
-#define OK 1
-#define ERROR 0
-
-#define TRUE 1
-#define FALSE 0
-
-#define MAXSIZE 20
-
-typedef int Status;
-typedef int ElemType;
+#include "data.h"
 
 typedef struct SqList SqList;
 
