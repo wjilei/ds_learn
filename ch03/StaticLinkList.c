@@ -4,11 +4,11 @@
 Status InitList_SLL(StaticLinkList space)
 {
     int i;
-    for (i = 0; i < MAXSIZE; i++)
+    for (i = 0; i < MAXSIZE_SLL; i++)
     {
         space[i].cur = i + 1;
     }
-    space[MAXSIZE - 1].cur = 0;
+    space[MAXSIZE_SLL - 1].cur = 0;
     return OK;
 }
 
@@ -30,7 +30,7 @@ void Free_SLL(StaticLinkList space, int i)
 
 int ListLength_SLL(StaticLinkList L)
 {
-    int i = MAXSIZE-1;
+    int i = MAXSIZE_SLL-1;
     int len = 0;
     while(L[i].cur) {
         len ++;
@@ -42,7 +42,7 @@ int ListLength_SLL(StaticLinkList L)
 Status ListInsert_SLL(StaticLinkList space, int i, ElemType e)
 {
     int j, k, l;
-    l = MAXSIZE - 1;
+    l = MAXSIZE_SLL - 1;
     if (i < 1 || i > ListLength_SLL(space) + 1)
     {
         return ERROR;
@@ -66,7 +66,7 @@ Status ListInsert_SLL(StaticLinkList space, int i, ElemType e)
 Status ListDelete_SLL(StaticLinkList L, int i)
 {
     int j;
-    int k = MAXSIZE-1;
+    int k = MAXSIZE_SLL-1;
     if (i < 1 || i > ListLength_SLL(L))
     {
         return ERROR;
@@ -82,3 +82,17 @@ Status ListDelete_SLL(StaticLinkList L, int i)
     return OK;
 }
 
+Status GetElem_SLL(StaticLinkList L, int i, ElemType *e) {
+    int j,k;
+    k = MAXSIZE_SLL-1;
+    if(i < 1 || i > ListLength_SLL(L)){
+        return ERROR;
+    }
+
+    for (j = 1;j<=i;j ++){
+        k = L[k].cur;
+    }
+
+    *e = L[k].data;
+    return OK;
+}

@@ -2,7 +2,7 @@
 #define _SLL_H_
 
 
-#define MAXSIZE 1000
+#define MAXSIZE_SLL 1000
 
 #define OK 1
 #define ERROR 0
@@ -14,7 +14,7 @@ typedef int Status;
 typedef struct {
     ElemType data;
     int cur;
-} Component, StaticLinkList[MAXSIZE];
+} Component, StaticLinkList[MAXSIZE_SLL];
 
 
 Status InitList_SLL(StaticLinkList space);
@@ -26,5 +26,7 @@ int ListLength_SLL(StaticLinkList L);
 Status ListInsert_SLL(StaticLinkList space, int i, ElemType e);
 
 Status ListDelete_SLL(StaticLinkList L, int i);
+
+Status GetElem_SLL(StaticLinkList L, int i, ElemType *e);
 
 #endif

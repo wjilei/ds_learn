@@ -34,10 +34,29 @@ static void PrintLinkList(LinkList L)
   printf("\n");
 }
 
-static void test_sll_list() {
+static void test_sll_list()
+{
   StaticLinkList L;
-  memset(L, 0, sizeof(Component) * MAXSIZE);
+  int i;
+  ElemType e;
+  memset(L, 0, sizeof(Component) * MAXSIZE_SLL);
   InitList_SLL(L);
+
+  ListInsert_SLL(L, 1, 10);
+  ListInsert_SLL(L, 2, 11);
+  for (i = 1; i <= ListLength_SLL(L); i++)
+  {
+    GetElem_SLL(L, i, &e);
+    printf("%d ", e);
+  }
+  printf("\n");
+  ListDelete_SLL(L, 1);
+  for (i = 1; i <= ListLength_SLL(L); i++)
+  {
+    GetElem_SLL(L, i, &e);
+    printf("%d ", e);
+  }
+  printf("\n");
 }
 
 int main()
