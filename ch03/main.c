@@ -2,31 +2,31 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "LinkList.h"
 #include "data.h"
+#include "sqlist.h"
+#include "LinkList.h"
 
-// #include "sqlist.h"
+static void PrintSqList(SqList L)
+{
+  int i;
+  ElemType e;
+  for (i = 1; i <= SqListLength(L); i++)
+  {
+    SqGetElem(L, i, &e);
+    printf("%d ", e);
+  }
 
-// static void PrintSqList(SqList L) {
-//   int i;
-//   ElemType e;
-//   for (i = 1; i <= ListLength(L); i++) {
-//     GetElem(L, i, &e);
-//     printf("%d ", e);
-//   }
-
-//   printf("\n");
-// }
+  printf("\n");
+}
 
 static void PrintLinkList(LinkList L)
 {
-  int len = ListLength(L);
+  int len = LL_ListLength(L);
   int i;
   ElemType e;
-  printf("%d\n", len);
   for (i = 1; i <= len; i++)
   {
-    GetElem(L, i, &e);
+    LL_GetElem(L, i, &e);
     printf("%d ", e);
   }
   printf("\n");
@@ -34,27 +34,27 @@ static void PrintLinkList(LinkList L)
 
 int main()
 {
-  // SqList L = {0};
-  // ElemType e = 10, e1, e2;
-  // int i;
-  // ListInsert(&L, 1, 10);
-  // ListInsert(&L, 2, 11);
+  SqList L1 = {0};
+  ElemType e2;
 
-  // PrintSqList(L);
-
-  // ListDelete(&L, 1, &e2);
-
-  // PrintSqList(L);
-
-  LinkList L;
+  LinkList L2;
   ElemType e;
   Status ret;
-  L = CreateList();
+  SqListInsert(&L1, 1, 10);
+  SqListInsert(&L1, 2, 11);
 
-  ListInsert(&L, 1, 2);
-  ListInsert(&L, 2, 3);
-  ListInsert(&L, 3, 5);
-  ret = ListInsert(&L, 5, 10);
+  PrintSqList(L1);
+
+  SqListDelete(&L1, 1, &e2);
+
+  PrintSqList(L1);
+
+  L2 = LL_CreateListHead();
+
+  LL_ListInsert(&L2, 1, 2);
+  LL_ListInsert(&L2, 2, 3);
+  LL_ListInsert(&L2, 3, 5);
+  ret = LL_ListInsert(&L2, 5, 10);
   if (ret != ERROR)
   {
     printf("error\n");
@@ -65,12 +65,12 @@ int main()
     printf("insert 5:10 error\n");
   }
 
-  PrintLinkList(L);
+  PrintLinkList(L2);
 
-  ListDelete(&L, 2, &e);
+  LL_ListDelete(&L2, 2, &e);
   printf("delete: %d\n", e);
 
-  ret = ListDelete(&L, 4, &e);
+  ret = LL_ListDelete(&L2, 4, &e);
   if (ret != ERROR)
   {
     printf("error\n");
@@ -81,9 +81,11 @@ int main()
     printf("delete 4 error\n");
   }
 
-  PrintLinkList(L);
+  PrintLinkList(L2);
 
-  ClearList(&L);
+  LL_ClearList(&L2);
+
+  LL_DestroyList(&L2);
 
   return 0;
 }

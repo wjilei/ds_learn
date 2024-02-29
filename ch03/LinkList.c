@@ -1,18 +1,18 @@
 
-#include "LinkList.h"
 #include "data.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "LinkList.h"
 
 
-LinkList CreateList() {
+LinkList LL_CreateListHead() {
   LinkList L = (LinkList)malloc(sizeof(Node));
   L->next = NULL;
   return L;
 }
 
-void ClearList(LinkList *L) {
+void LL_ClearList(LinkList *L) {
   LinkList p,next;
   p = (*L)->next;
   while(p) {
@@ -21,13 +21,18 @@ void ClearList(LinkList *L) {
     p = next;
   }
 
+  (*L)->next = NULL;
+}
+
+
+void LL_DestroyList(LinkList *L) {
+  LL_ClearList(L);
   free(*L);
-  *L = NULL;
 }
 
 // 初始条件: 线性表L已存在,1<=i<=ListLength(L)
 // 操作结果: 用e返回L中第i个数据元素的值
-Status GetElem(LinkList L, int i, ElemType *e) {
+Status LL_GetElem(LinkList L, int i, ElemType *e) {
   int j;
   LinkList p = L->next;
   j = 1;
@@ -44,7 +49,7 @@ Status GetElem(LinkList L, int i, ElemType *e) {
 
 // 初始条件：线性表L已存在, 1<=i<=ListLength(L)
 // 操作结果: 在L中第i个位置插入新的数据元素e,L的长度加1
-Status ListInsert(LinkList *L, int i, ElemType e) {
+Status LL_ListInsert(LinkList *L, int i, ElemType e) {
   int j;
   LinkList p, s;
 
@@ -69,7 +74,7 @@ Status ListInsert(LinkList *L, int i, ElemType e) {
 
 // 初始条件: 线性表L不为空, 1<=i<=ListLength(L)
 // 操作结果：删除L的第i个数据元素，并用e返回其值，L的长度减1
-Status ListDelete(LinkList *L, int i, ElemType *e) {
+Status LL_ListDelete(LinkList *L, int i, ElemType *e) {
   int j;
   LinkList p, q;
   p = *L;
@@ -90,7 +95,7 @@ Status ListDelete(LinkList *L, int i, ElemType *e) {
   return OK;
 }
 
-int ListLength(LinkList L) {
+int LL_ListLength(LinkList L) {
   int j=0;
   LinkList p;
   p = L->next;
