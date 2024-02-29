@@ -6,6 +6,8 @@
 #include "sqlist.h"
 #include "LinkList.h"
 
+#include "StaticLinkList.h"
+
 static void PrintSqList(SqList L)
 {
   int i;
@@ -30,6 +32,12 @@ static void PrintLinkList(LinkList L)
     printf("%d ", e);
   }
   printf("\n");
+}
+
+static void test_sll_list() {
+  StaticLinkList L;
+  memset(L, 0, sizeof(Component) * MAXSIZE);
+  InitList_SLL(L);
 }
 
 int main()
@@ -86,6 +94,8 @@ int main()
   LL_ClearList(&L2);
 
   LL_DestroyList(&L2);
+
+  test_sll_list();
 
   return 0;
 }
