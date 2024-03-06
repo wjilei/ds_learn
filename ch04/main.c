@@ -1,13 +1,19 @@
-#include <stdio.h>
+#include "SqStack.h"
+#include <stdio.h>
 
+static void test_sq_stack() {
+  SqStack s;
+  SElemType e;
+  s.top = -1;
 
-static int gcd(int p, int q) {
-  int r;
-  if(q == 0) return p;
-  r = p % q;
-  return gcd(q,r);
+  SqStack_Push(&s, 10);
+  SqStack_Push(&s, 11);
+
+  SqStack_Pop(&s, &e);
+
+  printf("%d\n", e);
 }
 int main() {
-  printf("%d\n", gcd(12,18));
+  test_sq_stack();
   return 0;
 }

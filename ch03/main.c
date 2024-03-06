@@ -2,18 +2,16 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "data.h"
-#include "sqlist.h"
 #include "LinkList.h"
+#include "data.h"
+#include "sqlist.h"
 
 #include "StaticLinkList.h"
 
-static void PrintSqList(SqList L)
-{
+static void PrintSqList(SqList L) {
   int i;
   ElemType e;
-  for (i = 1; i <= SqListLength(L); i++)
-  {
+  for (i = 1; i <= SqListLength(L); i++) {
     SqGetElem(L, i, &e);
     printf("%d ", e);
   }
@@ -21,21 +19,33 @@ static void PrintSqList(SqList L)
   printf("\n");
 }
 
-static void PrintLinkList(LinkList L)
-{
+static void PrintLinkList(LinkList L) {
   int len = LL_ListLength(L);
   int i;
   ElemType e;
-  for (i = 1; i <= len; i++)
-  {
+  for (i = 1; i <= len; i++) {
     LL_GetElem(L, i, &e);
     printf("%d ", e);
   }
   printf("\n");
 }
 
-static void test_sll_list()
-{
+static void test_sq_list() {
+
+  SqList L1 = {0};
+  ElemType e;
+
+  SqListInsert(&L1, 1, 10);
+  SqListInsert(&L1, 2, 11);
+
+  PrintSqList(L1);
+
+  SqListDelete(&L1, 1, &e);
+
+  PrintSqList(L1);
+}
+
+static void test_sll_list() {
   StaticLinkList L;
   int i;
   ElemType e;
@@ -44,37 +54,24 @@ static void test_sll_list()
 
   ListInsert_SLL(L, 1, 10);
   ListInsert_SLL(L, 2, 11);
-  for (i = 1; i <= ListLength_SLL(L); i++)
-  {
+  for (i = 1; i <= ListLength_SLL(L); i++) {
     GetElem_SLL(L, i, &e);
     printf("%d ", e);
   }
   printf("\n");
   ListDelete_SLL(L, 1);
-  for (i = 1; i <= ListLength_SLL(L); i++)
-  {
+  for (i = 1; i <= ListLength_SLL(L); i++) {
     GetElem_SLL(L, i, &e);
     printf("%d ", e);
   }
   printf("\n");
 }
 
-int main()
-{
-  SqList L1 = {0};
-  ElemType e2;
+void test_link_list() {
 
   LinkList L2;
   ElemType e;
   Status ret;
-  SqListInsert(&L1, 1, 10);
-  SqListInsert(&L1, 2, 11);
-
-  PrintSqList(L1);
-
-  SqListDelete(&L1, 1, &e2);
-
-  PrintSqList(L1);
 
   L2 = LL_CreateListHead();
 
@@ -82,13 +79,10 @@ int main()
   LL_ListInsert(&L2, 2, 3);
   LL_ListInsert(&L2, 3, 5);
   ret = LL_ListInsert(&L2, 5, 10);
-  if (ret != ERROR)
-  {
+  if (ret != ERROR) {
     printf("error\n");
-    return 2;
-  }
-  else
-  {
+    exit(1);
+  } else {
     printf("insert 5:10 error\n");
   }
 
@@ -98,13 +92,10 @@ int main()
   printf("delete: %d\n", e);
 
   ret = LL_ListDelete(&L2, 4, &e);
-  if (ret != ERROR)
-  {
+  if (ret != ERROR) {
     printf("error\n");
-    return 2;
-  }
-  else
-  {
+    exit(1);
+  } else {
     printf("delete 4 error\n");
   }
 
@@ -113,7 +104,12 @@ int main()
   LL_ClearList(&L2);
 
   LL_DestroyList(&L2);
+}
 
+int main() {
+
+  test_sq_list();
+  test_link_list();
   test_sll_list();
 
   return 0;
