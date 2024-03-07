@@ -1,7 +1,6 @@
 #ifndef _LINK_LIST_H_
 #define _LINK_LIST_H_
-
-#include "data.h"
+#include "../utils.h"
 
 /*线性表的单链表存储结构*/
 typedef struct Node {

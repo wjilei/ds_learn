@@ -2,7 +2,7 @@
 #ifndef _SQ_LIST_H_
 #define _SQ_LIST_H_
 
-#include "data.h"
+#include "../utils.h"
 
 typedef struct SqList SqList;
 
