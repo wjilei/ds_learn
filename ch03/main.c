@@ -2,10 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "../utils.h"
 #include "LinkList.h"
-#include "data.h"
 #include "sqlist.h"
-
 #include "StaticLinkList.h"
 
 static void PrintSqList(SqList L) {
